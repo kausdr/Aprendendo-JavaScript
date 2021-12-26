@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+    <body>
+        <head>
+            <meta charset="UTF-8">
+            <meta http-quiv="X-UA-Compatible" content="IE=Edge">
+            <meta name="viewport" content="width=device-width,  initial-scale=1">
+            <title>Verificador De Idade</title>
+            <link rel="stylesheet" href="estilo.css">
+        </head>
+        <header>
+            <h1>Verificador De Idade</h1>
+        </header>
+        <main>
+            <div>
+                <p>
+                    Ano de Nascimento: <input type="number" name="txtano" id="txtano" min="0" max="2022">
+                </p>
+                <p>
+                    Sexo:
+                    <input type="radio" name="radsex" id="masc" checked>
+                    <label for="masc">Masculino</label>
+
+                    <input type="radio" name="radsex" id="fem">
+                    <label for="fem">Feminino</label>
+
+                    <input type="radio" name="radsex" id="outro">
+                    <label for="outro">Outro</label>
+                </p>
+                <p>
+                    <input type="button" value="Verificar" id="botao">
+                </p>
+
+            </div>
+            <div id="res">
+                <p>Preencha as informações acima para verificar o resultado!</p>
+            </div>
+        </main>
+        <footer>
+            <p>Exercício para treinar o uso de JavaScript</p>
+        </footer>
+
+        <script src="codiguin.js"></script>
+    </body>
+</html>

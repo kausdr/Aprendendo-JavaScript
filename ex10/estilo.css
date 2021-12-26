@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #A16D54;
+    text-align: center;
+    margin: 30px;
+    font-family: arial, sans-serif;
+}
+
+header{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    color: white;
+}
+
+main{
+    background-color: white;
+    color:  black;
+    width: 50vw;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.493);
+    padding: 15px;
+}
+
+div{
+    padding: 10px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+footer{
+    color: white;
+}
+
+footer::after{
+    content: '💻';
+}

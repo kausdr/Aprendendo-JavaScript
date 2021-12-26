@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <style>
+        body{
+            color: black;
+            background-color:rgb(248, 200, 248);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" id="btVerificar">
+    <div id="res">Resultado</div>
+
+    <script>
+        // chamando um Event Listener pro botão
+        var botao = document.querySelector('input#btVerificar')
+        botao.addEventListener('click', verificar)
+
+        var res = document.querySelector('div#res')
+
+        function verificar(){
+            var txtvel = window.document.querySelector('input#txtvel')
+            var vel = Number(txtvel.value)
+            res.innerHTML = `<p>Sua velocidade é de <strong>${vel} km/h</strong></p> `
+            if (vel>60){
+                res.innerHTML+= `<p>Você está <strong>MULTADO</strong> por excesso de velocidade.</p>`
+            }
+            res.innerHTML += `<p>Dirija com cinto de segurança!</p>`
+        }
+    </script>
+</body>
+</html>

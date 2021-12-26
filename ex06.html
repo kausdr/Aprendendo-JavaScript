@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <style>
+        body{
+            color: black;
+            background-color:rgb(248, 200, 248);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <input type="text" name="txtPais" id="txtPais">
+    <input type="button" value="Verificar" id="btVerificar">
+    <div id="res">Resultado</div>
+
+    <script>
+        // chamando um Event Listener pro botão
+        var botao = document.querySelector('input#btVerificar')
+        botao.addEventListener('click', verificar)
+
+        var res = document.querySelector('div#res')
+        var txtpais = window.document.querySelector('input#txtPais')
+
+        function verificar(){
+            if ((txtpais.value =='brasil') || (txtpais.value =='Brasil') || (txtpais.value =='BRASIL')){
+                res.innerHTML = `<p>Sua nacionalidade é <strong>brasileiro(a)</strong>!</p> `
+            }
+            else{
+                res.innerHTML+= `<p>Sua nacionalidade é <strong>estrangeiro(a)</strong>!</p> `
+            }
+        }
+    </script>
+</body>
+</html>

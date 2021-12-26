@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body{
+            color: black;
+            background-color:rgb(248, 200, 248);
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        div#area{
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 1.5em;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendendo eventos DOM</h1>
+
+    <div id="area">Clique em mim</div>
+
+
+    <script>
+        var a = window.document.getElementById('area')
+
+        //Posso chamar a função tanto dentro do CSS ou por meio de Event Listeners
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrou)
+        a.addEventListener('mouseout', saiu)
+
+        function clicar(){
+            a.style.background = 'red'
+            a.innerText = 'Clicou'
+        }
+
+        function entrou(){
+            a.style.background = 'pink'
+            a.innerText = 'Entrou'
+        }
+
+        function saiu(){
+            a.style.background = 'black'
+            a.innerText = 'Saiu'
+        }
+    </script>
+</body>
+</html>

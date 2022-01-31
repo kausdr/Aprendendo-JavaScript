@@ -145,3 +145,25 @@ ul#msg-erro{
 	color: red;
 	font-weight: bold;
 }
+
+
+.fadeOut{
+	opacity: 0;
+	transition: 0.5s;
+}
+
+label[for='filtrar-tabela']{
+	font-size: 1.3em;
+	display: inline;
+}
+
+input#filtrar-tabela{
+	width: 200px;
+	padding: 5px;
+	margin: 20px 5px;
+	display: inline-block;
+}
+
+.esconde{
+	display: none;
+}

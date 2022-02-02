@@ -8,11 +8,9 @@ var tbody = document.querySelector('#tabela-pacientes')
 // Add as informações no form sempre que aperto o botão
 function addPaciente(event){
     event.preventDefault()
-    var tabela = document.querySelector('#tabela-pacientes')
+    
     var form = document.querySelector('#form-adiciona')
     var paciente = obtemPacienteDoForm(form)
-
-    var pacienteTr = montaTr(paciente)
 
     var erros = validaPaciente(paciente)
 
@@ -23,8 +21,7 @@ function addPaciente(event){
         return
     }
 
-    tabela.appendChild(pacienteTr)
-
+    addPacienteNaTabela(paciente)
 
     form.reset()
     var mensagensErro = document.querySelector('#msg-erro')
@@ -102,6 +99,12 @@ function validaPaciente(paciente){
 
     return erros
     
+}
+
+function addPacienteNaTabela(paciente){
+    var pacienteTr = montaTr(paciente)
+    var tabela = document.querySelector('#tabela-pacientes')
+    tabela.appendChild(pacienteTr)
 }
 
 function exibeMsgDeErro(erros){
